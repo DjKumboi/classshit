@@ -85,3 +85,23 @@ public static void main (String[] args) {
    System.out.println("You rolled " + tries +" times");
    }
 }
+
+
+
+import java.util.*;
+import java.io.*;
+public class Cha{
+public static void main(String[]args) throws FileNotFoundException {
+//Scanner input = new Scanner(System.in);
+Scanner input = new Scanner(new File("test.txt"));
+String word = "";
+int sum = 0;
+int count = 0;
+while (input.hasNextInt()){
+sum = sum + input.nextInt();
+count++;
+}
+System.out.println("Average temperature: " + (sum/count));
+input.close();
+}
+}
