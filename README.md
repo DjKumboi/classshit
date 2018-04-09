@@ -1,4 +1,7 @@
-# classshit
+# class
+
+
+
 forgot usb
 public class indefiniteloops{
 public static void main (String[] args) {
@@ -9,6 +12,9 @@ public static void main (String[] args) {
       }
    }
 }
+
+
+
 
 
 public class symbol {
@@ -24,6 +30,9 @@ public class symbol {
 }
 
 
+
+
+
 public class square {
    public static void main (String[] args) {
       for (int i = 1; i<=12; i++){
@@ -34,6 +43,9 @@ public class square {
       }
    }
 } 
+
+
+
 
 
 public class nestedLoop{
@@ -49,6 +61,8 @@ public class nestedLoop{
 }
 
 
+
+
 public class indefiniteloops{
 public static void main (String[] args) {
       int i = 2;
@@ -58,6 +72,9 @@ public static void main (String[] args) {
       }
    }
 }
+
+
+
 
 
 import java.util.*;
@@ -88,6 +105,7 @@ public static void main (String[] args) {
 
 
 
+
 import java.util.*;
 import java.io.*;
 public class Cha{
@@ -102,6 +120,25 @@ sum = sum + input.nextInt();
 count++;
 }
 System.out.println("Average temperature: " + (sum/count));
+input.close();
+}
+}
+
+
+
+
+import java.util.*;
+import java.io.*;
+public class Cha{
+public static void main(String[]args) throws FileNotFoundException {
+Scanner input = new Scanner(new File("test.txt"));
+String word = "";
+int sum = 0;
+int count = 0;
+while (input.hasDouble()){
+System.out.println(input.nextDouble());
+}
+//System.out.println("Change in temperature:" + (sum/count));
 input.close();
 }
 }
