@@ -167,3 +167,78 @@ Scanner jobs = new Scanner(new File("hours.txt"));
 }
 }
       
+
+
+Version 2 printstream
+
+import java.util.*;
+import java.io.*;
+public class hoursworked{
+public static void main(String[]args) throws IOException {
+PrintStream outfile = new PrintStream( new File ("hours_out.txt"));
+Scanner jobs = new Scanner(new File("hours.txt"));
+   while(jobs.hasNextLine()){
+      String line = jobs.nextLine();
+      Scanner lineScan = new Scanner(line);
+      int id = (lineScan.nextInt());
+      String name = (lineScan.next());
+      double totalHours = 0.0;
+      int days = 0;
+         while (lineScan.hasNextDouble()){
+            totalHours += lineScan.nextDouble();
+            days++;
+      }
+      outfile.println(name + " (ID%" + id + ") worked " + totalHours + "hours (" + (totalHours/days) + "hours/day)");
+   }
+}
+}
+
+
+
+PrintStream
+
+import java.util.*
+import java.io.*
+public class Stream {
+   public static void main(String[]args) throws IOException{
+      PrintStream outfile = new PrintStream( new File ("Streamtest.txt"));
+         outfile.println("hello");
+         outfile.println("Steven Senegal");
+         outfile.println("action is coming");
+         outfile.println("hello");
+         outfile.println("hello");
+         outfile.println("hello");
+         outfile.println("hello");
+         outfile.println("hello");
+         outfile.println("hello");
+         outfile.println("hello");
+     
+}
+}
+
+
+printf version
+import java.util.*;
+import java.io.*;
+public class hoursworked{
+public static void main(String[]args) throws IOException {
+PrintStream outfile = new PrintStream( new File ("hours_out.txt"));
+Scanner jobs = new Scanner(new File("hours.txt"));
+   while(jobs.hasNextLine()){
+      String line = jobs.nextLine();
+      Scanner lineScan = new Scanner(line);
+      int id = (lineScan.nextInt());
+      String name = (lineScan.next());
+      double totalHours = 0.0;
+      int days = 0;
+         while (lineScan.hasNextDouble()){
+            totalHours += lineScan.nextDouble();
+            days++;
+      }
+      outfile.printf(name + " (ID#" + id + ") worked " + totalHours + "hours (%.2f" , (totalHours/days)); 
+      outfile.print("hours/day)");
+      outfile.println();
+   }
+}
+}
+      
