@@ -142,3 +142,28 @@ System.out.println(input.nextDouble());
 input.close();
 }
 }
+
+
+
+
+import java.util.*;
+import java.io.*;
+public class hoursworked{
+public static void main(String[]args) throws FileNotFoundException {
+Scanner jobs = new Scanner(new File("hours.txt"));
+   while(jobs.hasNextLine()){
+      String line = jobs.nextLine();
+      Scanner lineScan = new Scanner(line);
+      int id = (lineScan.nextInt());
+      String name = (lineScan.next());
+      double totalHours = 0.0;
+      int days = 0;
+         while (lineScan.hasNextDouble()){
+            totalHours += lineScan.nextDouble();
+            days++;
+      }
+      System.out.println(name + " (ID%" + id + ") worked " + totalHours + "hours (" + (totalHours/days) + "hours/day)");
+   }
+}
+}
+      
