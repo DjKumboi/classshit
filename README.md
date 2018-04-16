@@ -273,6 +273,6 @@ public class Filecompare {
        } 
    }
    System.out.println("Number of differences: " + count );
+   System.out.println("Khalid Diab CS1301");
 }
 }
-      
