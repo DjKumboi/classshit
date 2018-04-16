@@ -241,4 +241,38 @@ Scanner jobs = new Scanner(new File("hours.txt"));
    }
 }
 }
+
+
+
+//Khalid Diab CS1301
+import java.io.*;
+import java.util.*;
+
+public class Filecompare {
+    public static void main(String[] args) throws IOException {
+
+      String firstFile = "", secondFile = "";
+      String file1 = "", file2 = "";
+      
+      Scanner input = new Scanner(System.in);
+      System.out.print("First file name: ");
+      file1 = input.nextLine();
+      System.out.print("Second file name: ");
+      file2 = input.nextLine();
+            Scanner input1 = new Scanner(new File(file1));
+            Scanner input2 = new Scanner(new File(file2));
+            int count = 0;
+            int line = 0;
+               while(input1.hasNextLine() && input2.hasNextLine()){
+                  firstFile = input1.nextLine();   
+                  secondFile = input2.nextLine();
+                  line++; 
+                     if(!firstFile.equalsIgnoreCase(secondFile)){
+                       System.out.println("Difference found : " + "\n" + "Line: " + line + "\n"+firstFile + '\n' + secondFile);
+                       count++;
+       } 
+   }
+   System.out.println("Number of differences: " + count );
+}
+}
       
